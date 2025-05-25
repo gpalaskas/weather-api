@@ -1,0 +1,27 @@
+### Weather API Project – Short Report
+
+**Overall Process:**
+I built a weather forecasting API using Python, FastAPI, and SQLite. The API fetches data from the Meteomatics Weather API for 3 cities(Athens, Larnaka, Thessaloniki) over a 7-day period. 
+I stored the data in a local SQLite database and exposed endpoints to list locations, latest forecasts, temperature averages, and top-N rankings.
+
+**Key Decisions / Limitations:**
+I chose to deploy the API using Render because it is a user-friendly platform that simplifies cloud deployment. 
+My goal was to automate the daily data fetching by scheduling requests to the `/refresh` endpoint. 
+However, this feature is only available in Render’s paid plans. As a workaround, I implemented the `/refresh` endpoint so it can be triggered manually or externally to keep the database updated.
+
+**Time-Consuming Tasks:**
+Understanding how to correctly retrieve and structure the data returned by the Meteomatics API took a significant amount of time. 
+Their response format was nested and required careful parsing, especially to extract specific parameters like temperature and humidity.
+
+**Problems I Ran Into:**
+While using environment variables for authentication with Meteomatics, I initially named the variable `USERNAME` in my `.env` file. 
+Despite having the correct value, the script failed with an authorization error. After adding debug print statements, I noticed that `USERNAME` was returning `ADMIN` instead of my Meteomatics credentials. 
+After researching the issue, I discovered that `USERNAME` is a reserved environment variable on Windows systems. I resolved the issue by renaming the variable to `MY_USERNAME`.
+
+**Solutions & Tools Used:**
+- **FastAPI** – to build the RESTful API
+- **SQLite** – as a lightweight relational database
+- **Pandas** – for exporting database tables to CSV
+- **Render.com** – to deploy the solution to the cloud
+- **python-dotenv** – for managing environment variables
+- **requests** – to fetch weather data from the Meteomatics API

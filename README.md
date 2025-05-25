@@ -2,16 +2,16 @@
 
 # Python 3.9.13
 
-## How to Run
+# How to Run
 
-1. Clone the repository:
+1. Download and unzip the project folder (weather-api.zip)
 
- ```bash
- git clone https://github.com/your-username/weather-api.git
- cd weather-api
+2. Open a terminal and navigate into the project directory:
+
+ cd weather-api (-->bash)
 
 
-2. Create and activate a virtual environment:
+3. Create and activate a virtual environment:
 
  python -m venv venv
  # On Windows
@@ -20,29 +20,29 @@
  source venv/bin/activate
 
 
-3. Install dependencies:
+4. Install dependencies:
 
  pip install -r requirements.txt
 
 
-4. Set environment variables in .env file:
+5. Set environment variables in .env file:
 
  MY_USERNAME=repathsolutions_palaskas_giorgos
  PASSWORD=50TUH8hrr3
  #username and password are valid until 7-June-2025
 
 
-5. Run the data fetcher to populate the database:
+6. Run the data fetcher to populate the database:
 
  python fetch_data.py
 
 
-6. Start the FastAPI server:
+7. Start the FastAPI server:
 
  uvicorn main:app --reload
 
 
-7. Then open your browser at:
+8. Then open your browser at:
  
  http://127.0.0.1:8000/docs
 
