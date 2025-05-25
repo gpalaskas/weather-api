@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: weather-api
+    env: python
+    plan: free
+    region: frankfurt
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "./start.sh"
