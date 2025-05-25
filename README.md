@@ -15,10 +15,10 @@
 
  python -m venv venv
 
- #activate on Windows
+ #activate on Windows:
  venv\Scripts\activate
 
- #activate on macOS/Linux
+ #activate on macOS/Linux:
  source venv/bin/activate
 
 
