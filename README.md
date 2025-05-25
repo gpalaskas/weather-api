@@ -8,7 +8,7 @@
 
 2. Open a terminal and navigate into the project directory:
 
- cd weather-api (-->bash)
+ cd ..\weather-api-main\weather-api-main (check dir)
 
 
 3. Create and activate a virtual environment:
@@ -48,6 +48,6 @@
  
  http://127.0.0.1:8000/docs
 
- or testis live at:
+ or test it live at:
 
  https://weather-api-nk0x.onrender.com/docs
